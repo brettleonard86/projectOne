@@ -1,0 +1,35 @@
+#logo{
+	width: 300px;
+}
+.jumbotron{
+	text-align: middle;
+	background: rgba(201, 201, 201 , .85);
+}
+
+
+
+
+#randomQuoteGen, #customQuoteInput, #customQuoteReturn{
+	background: rgba(201, 201, 201 , .85);
+	border-radius: 25px;
+	padding: 20px;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+	background: url(../images/yodaWallpaper2.jpg) center center fixed;
+	width: 100%;
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: rgba(201, 201, 201 , .7);
+}
