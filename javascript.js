@@ -1,5 +1,5 @@
 $(document).on('click', '#submit', function() {
-  var queryURL = 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=movies&count=1'
+  var queryURL = 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=movies&count=1';
   $.ajax({
   type: "GET",
   beforeSend: function(request) {
@@ -7,6 +7,23 @@ $(document).on('click', '#submit', function() {
   },
   url: queryURL,
   }).done(function(response) {
-    console.log(response)
+    var sentence1 = response.quote;
+    var sentence2 = sentence1.split(' ').join('+');
+    var yodaQueryURL = 'https://yoda.p.mashape.com/yoda?sentence=' + sentence2;
+    var author = response.author;
+    console.log(response);
+    console.log(response.quote);
+    console.log(sentence2);
+    $.ajax({
+      type: "GET",
+      beforeSend: function(request) {
+        request.setRequestHeader("X-Mashape-Key", "DwGlBv2tmcmshJcNENrWBSMmi5Ikp1J56grjsnQmCbIvAbeMSW");
+      },
+      url: yodaQueryURL,
+    }).done(function(data) {
+      console.log(data);
+      var yodaSentence = data;
+      $("#randomQuoteGen").html(yodaSentence + "<br>- " + author)
+    })
   })
-})
+});
