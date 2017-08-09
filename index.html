@@ -71,9 +71,15 @@
             <div class="col-sm-10" id="randomQuoteGen">Empty Div for random Yoda quote</div>
         </div>
         <br>
-        <div class="row">
+        <div class="row" id="randomQuote">
           <div class="col-sm-1"></div>
-          <div class="col-sm-10">
+          <div class="col-sm-2">
+            <select class="form-control" id="quoteType" placeholder="2" required="required">
+              <option>Movies</option>
+              <option>Famous</option>
+              </select>
+          </div>
+          <div class="col-sm-8">
           <button type="button" class="btn btn-outline-primary" id="submit">Random Yoda Quote!</button>
           </div>
         </div>
@@ -110,12 +116,9 @@
         <br>
         <br>
     </div>
-
-
-
     <footer class="footer">
       <div class="container">
-        <p class="text-muted">Place sticky footer content here.</p>
+        <p class="text-muted">Powered by http://www.yodaspeak.co.uk/ and http://api.andrux.net.</p>
       </div>
     </footer>
 </body>
