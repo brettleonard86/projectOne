@@ -9,7 +9,7 @@ $(document).on('click', '#submit', function() {
   }).done(function(response) {
     var sentence1 = response.quote;
     var sentence2 = sentence1.split(' ').join('+')
-    var yodaQueryURL = "'https://yoda.p.mashape.com/yoda?sentence=' + sentence2";
+    var yodaQueryURL = 'https://yoda.p.mashape.com/yoda?sentence=' + sentence2;
     console.log(response.quote);
     console.log(sentence2);
     $.ajax({
