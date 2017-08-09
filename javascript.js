@@ -8,8 +8,10 @@ $(document).on('click', '#submit', function() {
   url: queryURL,
   }).done(function(response) {
     var sentence1 = response.quote;
-    var sentence2 = sentence1.split(' ').join('+')
+    var sentence2 = sentence1.split(' ').join('+');
     var yodaQueryURL = 'https://yoda.p.mashape.com/yoda?sentence=' + sentence2;
+    var author = response.author;
+    console.log(response);
     console.log(response.quote);
     console.log(sentence2);
     $.ajax({
@@ -20,6 +22,8 @@ $(document).on('click', '#submit', function() {
       url: yodaQueryURL,
     }).done(function(data) {
       console.log(data);
+      var yodaSentence = data;
+      $("#randomQuoteGen").html(yodaSentence + "<br>- " + author)
     })
   })
 });
