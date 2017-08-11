@@ -25,6 +25,16 @@ $(document).on('click', '#submit', function() {
 
   var spinner = new Spinner(opts).spin();
   $('#randomQuoteGen').html(spinner.el);
+  var pictureURL = "https://api.gettyimages.com/v3/search/images?phrase=yoda"
+  $.ajax({
+    type: 'GET',
+    beforeSend: function(request) {
+      request.setRequestHeader("Api-Key","wxrxqequqxkpjjcc7zuhc33a");
+    },
+    url: pictureURL,
+  }).done(function(data) {
+    console.log(data)
+  })
 
   var queryURL = 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=' + searchType + '&count=1';
   $.ajax({
