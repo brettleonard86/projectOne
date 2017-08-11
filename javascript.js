@@ -1,3 +1,7 @@
+$("#burger").on('click'function() {
+  $("#burger").toggleClass("active");
+  $("nav").toggleClass("show");
+});
 
 $("#navcontainer").click(function() {
   console.log("CLICKED");
@@ -5,10 +9,7 @@ $("#navcontainer").click(function() {
   $("nav").toggleClass("show");
 });
 
-$("#burger").click(function() {
-  $(this).toggleClass("active");
-  $("nav").toggleClass("show");
-});
+
 
 
 $(document).on('click', '#submit', function() {
