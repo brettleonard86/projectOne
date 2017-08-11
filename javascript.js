@@ -1,5 +1,5 @@
 $(document).on('click', '#submit', function() {
-
+  var searchType = $('#quoteType').val()
   var opts = {
     lines: 8 // The number of lines to draw
   , length: 10 // The length of each line
@@ -26,7 +26,7 @@ $(document).on('click', '#submit', function() {
   var spinner = new Spinner(opts).spin();
   $('#randomQuoteGen').html(spinner.el);
 
-  var queryURL = 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=movies&count=1';
+  var queryURL = 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=' + searchType + '&count=1';
   $.ajax({
   type: "GET",
   beforeSend: function(request) {
