@@ -33,7 +33,8 @@ $(document).on('click', '#submit', function() {
     },
     url: pictureURL,
   }).done(function(data) {
-    console.log(data)
+    var randomImage = Math.floor(Math.random()*30)
+    console.log(data.images[randomImage].display_sizes[0].uri);
   })
 
   var queryURL = 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=' + searchType + '&count=1';
