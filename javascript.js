@@ -5,6 +5,12 @@ $("#navcontainer").click(function() {
   $("nav").toggleClass("show");
 });
 
+$("#burger").click(function() {
+  $(this).toggleClass("active");
+  $("nav").toggleClass("show");
+});
+
+
 $(document).on('click', '#submit', function() {
   var searchType = $('#quoteType').val()
   var opts = {
