@@ -1,9 +1,13 @@
 
+
 $("#navcontainer").click(function() {
   console.log("CLICKED");
   $(this).toggleClass("active");
   $("nav").toggleClass("show");
 });
+
+
+
 
 $(document).on('click', '#submit', function() {
   var searchType = $('#quoteType').val()
