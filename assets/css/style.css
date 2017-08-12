@@ -19,7 +19,6 @@
 
 .space {
   text-align: middle;
-  margin-top: 100px;
   /* Force the body to fill the entire screen */
   width: 100%;
   height: 100%;
@@ -46,7 +45,7 @@
   display: flex;
   justify-content: center;
   position: relative;
-  height: 800px;
+  height: 200px;
   color: #feda4a;
   font-family: 'Pathway Gothic One', sans-serif;
   font-size: 500%;
@@ -61,7 +60,17 @@
   position: relative;
   top: 9999px;
   transform-origin: 50% 100%;
-  animation: crawl 60s linear;
+  animation: crawl 120s linear;
+  margin: -75px;
+}
+
+.crawl p {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.crawl h1 {
+  font-size: 75px;
 }
 
 .crawl > .title {
