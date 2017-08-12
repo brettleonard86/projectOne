@@ -32,19 +32,17 @@ $(document).on('click', '#submit', function() {
 
   var spinner = new Spinner(opts).spin();
   $('#randomQuoteGen').html(spinner.el);
-  var pictureURL = "https://api.gettyimages.com/v3/search/images?phrase=yoda"
+  var pictureURL = "https://pixabay.com/api/?key=6144160-20e5db92d8083f41ba882a26a&q=yoda"
   $.ajax({
     type: 'GET',
-    beforeSend: function(request) {
-      request.setRequestHeader("Api-Key","wxrxqequqxkpjjcc7zuhc33a");
-    },
     url: pictureURL,
   }).done(function(data) {
     console.log(data);
-    var randomImage = Math.floor(Math.random()*30);
-    console.log('randomImage=', data.images[randomImage]);
-    var image = "<p><img src='" + data.images[randomImage].display_sizes[0].uri + "' height=" + data.images[randomImage].max_dimensions.height / 4 + ">'</p>";
+    var randomImage = Math.floor(Math.random()*16);
+    console.log(data);
+    var image = "<p style='text-align:center'><img src='" + data.hits[randomImage].webformatURL + "'></p>";
     $("#image-space").html(image)
+    console.log(randomImage)
   })
 
   var queryURL = 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=' + searchType + '&count=1';
@@ -72,6 +70,9 @@ $(document).on('click', '#submit', function() {
       console.log(data);
       var yodaSentence = data;
       $("#randomQuoteGen").html(yodaSentence + "<br>- " + author)
+    }).fail(function(){
+      console.log("fail");
+      $("#randomQuoteGen").html("<p>Frog in my throat is</p>");
     })
   })
 });
