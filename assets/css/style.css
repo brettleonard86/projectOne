@@ -28,9 +28,6 @@
   background-image: url("../images/star-background.jpg");
 }
 
-.container {
-
-}
 
 .fade {
   position: relative;
@@ -88,7 +85,7 @@
     top: 0;
     transform: rotateX(20deg)  translateZ(0);
   }
-  100% { 
+  100% {
     top: -6000px;
     transform: rotateX(25deg) translateZ(-2500px);
   }
