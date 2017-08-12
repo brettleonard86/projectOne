@@ -76,7 +76,7 @@ $(document).on('click', '#submit', function() {
       $("#randomQuoteGen").html(yodaSentence + "<br>- " + author)
     }).fail(function(){
       console.log("fail");
-      $("#randomQuoteGen").html("<p>Frog in my throat is</p>");
+      $("#randomQuoteGen").html("<p style='color:black'>Frog in my throat is</p>");
     })
   })
 });
