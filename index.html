@@ -7,75 +7,53 @@
     <!-- Reset CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <!-- Bootsrap -->
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Even More CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <!-- NavBar CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/navstyle.css">
     <!-- jQuery link -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <script type="text/javascript" src="spin.min.js"></script>
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
     <!-- Javascript-->
     <script type="text/javascript" src="javascript.js"></script>
     <!-- Favicons -->
-   <!-- favicon-16x16.png - The classic favicon, displayed in the tabs. -->
+    <!-- favicon-16x16.png - The classic favicon, displayed in the tabs. -->
     <link rel="icon" type="image/png" href="assets/images/favicon-16x16.png" sizes="16x16">
     <!-- favicon-32x32.png - For Safari on Mac OS. -->
     <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png" sizes="32x32">
-
-
 </head>
 
 <body>
-
-
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-3 col-lg-2">
-      <div id="container">
-  <div id="burger">
-          <div class="bun top"></div>
-          <div class="filling"></div>
-          <div class="bun bottom"></div>
-  </div>
-</div>
-      <nav class="navbar navbar-default navbar-fixed-side">
-        <ul>
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li class="green">
-            <a href="#">Jedi</a>
-          </li>
-          <li class="red">
-            <a href="#">Sith</a>
-          </li>
-          <li class="yellow">
-            <a href="#">Sentinel</a>
-          </li>
-          <li class="purple">
-            <a href="#">Samuel L. Jackson</a>
-          </li>
-        </ul>
-        <!-- normal collapsible navbar markup -->
-      </nav>
-    </div>
-    <div class="col-sm-9 col-lg-10">
-      <!-- your page content -->
-
-
-
-
-      <div class="jumbotron head">
-        <div class="col-sm-12">
-          <h1 class="text-center">FAMOUS QUOTES BY YODA</h1>
-          <h2 class="text-center">Yes, hmmmmmm.</h2>
-          <div id="image-space"></div>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#about">Opening Credits</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
         </div>
-      </div>
+    </nav>
+    <div class="jumbotron head">
+        <div class="container">
+            <div class="col-sm-12">
+                <h1 class="text-center">FAMOUS QUOTES BY YODA</h1>
+                <h2 class="text-center">Yes, hmmmmmm.</h2>
+                <div id="image-space"></div>
+            </div>
+        
         <!-- Random Quote -->
         <div class="row" id="randomQuote">
             <div class="col-sm-1"></div>
@@ -83,41 +61,35 @@
         </div>
         <br>
         <div class="row" id="randomQuote">
-          <div class="col-sm-1"></div>
-          <div class="col-sm-2">
-            <select class="form-control" id="quoteType" placeholder="2" required="required">
-              <option value="movies">Movies</option>
-              <option value="famous">Famous</option>
-              </select>
-          </div>
-          <div class="col-sm-8">
-          <button type="button" class="btn btn-outline-primary" id="submit">Random Yoda Quote!</button>
-          </div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2">
+                <select class="form-control" id="quoteType" placeholder="2" required="required">
+                    <option value="movies">Movies</option>
+                    <option value="famous">Famous</option>
+                </select>
+            </div>
+            <div class="col-sm-8">
+                <button type="button" class="btn btn-outline-primary" id="submit">Random Yoda Quote!</button>
+            </div>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+    </div>
+    <br>
+    <br>
     </div>
     <footer class="footer">
-      <div class="container">
-        <p class="text-muted">Powered by http://www.yodaspeak.co.uk/ and http://api.andrux.net.</p>
-      </div>
-
-  </div>
-</div>
+        <div class="container">
+            <p class="text-muted">Powered by http://www.yodaspeak.co.uk/ and http://api.andrux.net.</p>
+        </div>
+        </div>
+        </div>
     </footer>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="https://maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js"></script>
+<script>
+window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="https://maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js"></script>
+
 </html>

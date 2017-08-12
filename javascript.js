@@ -1,7 +1,4 @@
-$("#burger").on('click'function() {
-  $("#burger").toggleClass("active");
-  $("nav").toggleClass("show");
-});
+
 
 $("#navcontainer").click(function() {
   console.log("CLICKED");
@@ -47,8 +44,11 @@ $(document).on('click', '#submit', function() {
     },
     url: pictureURL,
   }).done(function(data) {
-    var randomImage = Math.floor(Math.random()*30)
-    console.log(data.images[randomImage].display_sizes[0].uri);
+    console.log(data);
+    var randomImage = Math.floor(Math.random()*30);
+    console.log('randomImage=', data.images[randomImage]);
+    var image = "<p><img src='" + data.images[randomImage].display_sizes[0].uri + "' height=" + data.images[randomImage].max_dimensions.height / 4 + ">'</p>";
+    $("#image-space").html(image)
   })
 
   var queryURL = 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=' + searchType + '&count=1';
