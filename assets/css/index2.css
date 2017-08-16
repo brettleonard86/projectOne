@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 html, body {
-  background: url(/Users/brettl/Desktop/Brett/School/Homework/projectOne/assets/images/yodaWallpaper3.jpg) center center fixed;
+  background: url(../images/yodaWallpaper3.jpg) center center fixed;
 	width: 100%;
 }
 
