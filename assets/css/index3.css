@@ -95,7 +95,7 @@ html, body {
 nav {
   font-family: Open Sans;
   color: white;
-  background: green;
+  background: black;
   position: absolute;
   transform: translatex(-100%);
   transition: transform 0.2s ease;

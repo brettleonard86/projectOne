@@ -104,7 +104,12 @@ html {
   min-height: 100%;
 }
 body {
-	background: url(../images/yodaWallpaper2.jpg) center center fixed;
+	width: 100%;
+	/* Margin bottom by footer height */
+	margin-bottom: 60px;
+}
+.body {
+	background-color: black !important;
 	width: 100%;
   /* Margin bottom by footer height */
   margin-bottom: 60px;
