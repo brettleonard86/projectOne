@@ -5,8 +5,7 @@ $("#navcontainer").click(function() {
   $(this).toggleClass("active");
   $("nav").toggleClass("show");
 });
-
-
+var yodaImage
 
 
 $(document).on('click', '#submit', function() {
@@ -45,8 +44,9 @@ $(document).on('click', '#submit', function() {
     var randomImage = Math.floor(Math.random()*16);
     console.log(data);
     var image = "<p style='text-align:center'><img src='" + data.hits[randomImage].webformatURL + "'></p>";
-    $("#image-space").html(image)
-    console.log(randomImage)
+    $("#image-space").html(image);
+    console.log(randomImage);
+    yodaImage = data.hits[randomImage].webformatURL;
   })
 
   var queryURL = 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=' + searchType + '&count=1';
@@ -73,10 +73,27 @@ $(document).on('click', '#submit', function() {
     }).done(function(data) {
       console.log(data);
       var yodaSentence = data;
+
+var yodaHtml = '\
+<a href="https://twitter.com/share" class="twitter-share-button" data-size="large"\
+data-text="'+ yodaSentence +'"\
+data-hashtags="yodaspeak" data-lang="en" data-show-count="false">Tweet</a>\
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>\
+';
+
+
       $("#randomQuoteGen").html(yodaSentence + "<br>- " + author)
+      $("#tweetAtYoda").html(yodaHtml)
     }).fail(function(){
       console.log("fail");
       $("#randomQuoteGen").html("<p style='color:black'>Frog in my throat is</p>");
+      var yodaHtml = '\
+      <a href="https://twitter.com/share" class="twitter-share-button" data-size="large"\
+      data-text="Frog in my throat is"\
+      data-hashtags="yodaspeak" data-lang="en" data-show-count="false">Tweet</a>\
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>\
+      ';
+      $("#tweetAtYoda").html(yodaHtml)
     })
   })
 });
