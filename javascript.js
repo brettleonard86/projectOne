@@ -6,6 +6,7 @@ $("#navcontainer").click(function() {
   $("nav").toggleClass("show");
 });
 var yodaImage
+var yodaImageURL
 
 
 $(document).on('click', '#submit', function() {
@@ -43,6 +44,7 @@ $(document).on('click', '#submit', function() {
     console.log(data);
     var randomImage = Math.floor(Math.random()*16);
     console.log(data);
+    yodaImageURL = data.hits[randomImage].pageURL;
     var image = "<p style='text-align:center'><img src='" + data.hits[randomImage].webformatURL + "'></p>";
     $("#image-space").html(image);
     console.log(randomImage);
@@ -76,7 +78,7 @@ $(document).on('click', '#submit', function() {
 
 var yodaHtml = '\
 <a href="https://twitter.com/share" class="twitter-share-button" data-size="large"\
-data-text="'+ yodaSentence +'"\
+data-text="'+ yodaSentence + yodaImageURL + '"\
 data-hashtags="yodaspeak" data-lang="en" data-show-count="false">Tweet</a>\
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>\
 ';
@@ -89,8 +91,8 @@ data-hashtags="yodaspeak" data-lang="en" data-show-count="false">Tweet</a>\
       $("#randomQuoteGen").html("<p style='color:black'>Frog in my throat is</p>");
       var yodaHtml = '\
       <a href="https://twitter.com/share" class="twitter-share-button" data-size="large"\
-      data-text="Frog in my throat is"\
-      data-hashtags="yodaspeak" data-lang="en" data-show-count="false">Tweet</a>\
+      data-text="Frog in my throat is ' + yodaImageURL + '"\
+      data-lang="en" data-show-count="false">Tweet</a>\
       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>\
       ';
       $("#tweetAtYoda").html(yodaHtml)
