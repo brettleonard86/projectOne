@@ -6,8 +6,6 @@
 }
 .head {
 	text-align: middle;
-  margin-top: 100px;
-  /* Force the body to fill the entire screen */
   width: 100%;
   height: 100%;
   /* Hide elements that flow outside the viewable space */
