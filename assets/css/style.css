@@ -17,6 +17,10 @@
   background-color: transparent;
 }
 
+.main-title {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
 .space {
   text-align: middle;
   /* Force the body to fill the entire screen */
