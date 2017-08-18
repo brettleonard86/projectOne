@@ -88,7 +88,7 @@ data-hashtags="yodaspeak" data-lang="en" data-show-count="false">Tweet</a>\
       $("#tweetAtYoda").html(yodaHtml)
     }).fail(function(){
       console.log("fail");
-      $("#randomQuoteGen").html("<p style='color:black'>Frog in my throat is</p>");
+      $("#randomQuoteGen").html("<p style='color:black'>Frog in my throat there is</p>");
       var yodaHtml = '\
       <a href="https://twitter.com/share" class="twitter-share-button" data-size="large"\
       data-text="Frog in my throat is ' + yodaImageURL + '"\
